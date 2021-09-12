@@ -5,7 +5,7 @@
          backupGlobals="false"
          backupStaticAttributes="false"
          colors="true"
-         verbose="true" 
+         verbose="true"
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
