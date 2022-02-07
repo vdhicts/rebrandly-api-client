@@ -8,7 +8,7 @@ This packages requires PHP 7.4 or higher.
 
 ## Installation
 
-This package can be used in any PHP project or with any framework. The packages is tested in PHP 7.4.
+This package can be used in any PHP project or with any framework.
 
 You can install the package via composer:
 
