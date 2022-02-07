@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "php": "^7.4",
+        "php": "^7.4 || ^8.0",
         "ext-json": "*",
         "guzzlehttp/guzzle": "^7.0",
         "nesbot/carbon": "^2.31"
@@ -29,6 +29,9 @@
         }
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true
+        }
     }
 }

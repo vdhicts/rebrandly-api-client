@@ -4,7 +4,7 @@ Easily use the [API](https://developers.rebrandly.com/) of the url shortener [Re
 
 ## Requirements
 
-This packages requires PHP 7.4+.
+This packages requires PHP 7.4 or higher.
 
 ## Installation
 
