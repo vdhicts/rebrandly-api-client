@@ -14,7 +14,7 @@ class Links extends Endpoint
      * @param Options|null $options
      * @return array<Models\Link>
      */
-    public function list(Options $options = null): array
+    public function list(?Options $options = null): array
     {
         $payload = $this->prepare([], $options, [
             'domain.id',
@@ -62,7 +62,7 @@ class Links extends Endpoint
      * @param Options|null $options
      * @return int
      */
-    public function count(Options $options = null): int
+    public function count(?Options $options = null): int
     {
         $payload = $this->prepare([], $options, [
             'favourite',
@@ -172,7 +172,7 @@ class Links extends Endpoint
      * @param Options|null $options
      * @return array<Models\Tag>
      */
-    public function tags(string $id, Options $options = null): array
+    public function tags(string $id, ?Options $options = null): array
     {
         $payload = $this->prepare([], $options, [
             'orderBy',
@@ -200,7 +200,7 @@ class Links extends Endpoint
      * @param Options|null $options
      * @return array<Models\Script>
      */
-    public function scripts(string $id, Options $options = null): array
+    public function scripts(string $id, ?Options $options = null): array
     {
         $payload = $this->prepare([], $options, [
             'orderBy',

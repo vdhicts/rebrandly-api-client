@@ -15,14 +15,14 @@ abstract class Endpoint
         $this->client = $client;
     }
 
-    public function setWorkspace(string $workspace = null): Endpoint
+    public function setWorkspace(?string $workspace = null): Endpoint
     {
         $this->workspace = $workspace;
 
         return $this;
     }
 
-    private function queryFromOptions(Options $options = null, array $allowedFields = []): array
+    private function queryFromOptions(?Options $options = null, array $allowedFields = []): array
     {
         if (is_null($options)) {
             return [];
@@ -41,7 +41,7 @@ abstract class Endpoint
         return $optionsArray;
     }
 
-    protected function prepare(array $payload = [], Options $options = null, array $allowedFields = []): array
+    protected function prepare(array $payload = [], ?Options $options = null, array $allowedFields = []): array
     {
         if (empty($this->workspace)) {
             unset($payload['header']['workspace']);
