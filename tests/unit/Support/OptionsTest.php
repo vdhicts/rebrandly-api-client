@@ -7,7 +7,7 @@ use Vdhicts\Rebrandly\Support\Options;
 
 class OptionsTest extends TestCase
 {
-    public function testOptionsWithAttributes()
+    public function testOptionsWithAttributes(): void
     {
         $attributes = [
             'a' => 1,
@@ -20,7 +20,7 @@ class OptionsTest extends TestCase
         $this->assertSame(3, count($options->get()));
     }
 
-    public function testOptionsAvailableCheck()
+    public function testOptionsAvailableCheck(): void
     {
         $attributes = [
             'a' => 1,
@@ -36,7 +36,7 @@ class OptionsTest extends TestCase
         $this->assertFalse($options->has('d'));
     }
 
-    public function testOptionsRetrieval()
+    public function testOptionsRetrieval(): void
     {
         $attributes = [
             'a' => 1,
@@ -52,7 +52,7 @@ class OptionsTest extends TestCase
         $this->assertNull($options->get('d'));
     }
 
-    public function testMutatingOptions()
+    public function testMutatingOptions(): void
     {
         $attributes = [
             'a' => 1,
@@ -72,7 +72,7 @@ class OptionsTest extends TestCase
         $this->assertSame(4, $options->get('a'));
     }
 
-    public function testSerializingOptionsToArray()
+    public function testSerializingOptionsToArray(): void
     {
         $attributes = [
             'a' => 1,
@@ -82,8 +82,6 @@ class OptionsTest extends TestCase
 
         $options = new Options($attributes);
         $optionsArray = $options->toArray();
-
-        $this->assertIsArray($optionsArray);
 
         $this->assertSame(3, count($optionsArray));
 

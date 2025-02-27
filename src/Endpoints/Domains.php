@@ -14,7 +14,7 @@ class Domains extends Endpoint
      * @param Options|null $options
      * @return array<Models\Domain>
      */
-    public function list(Options $options = null): array
+    public function list(?Options $options = null): array
     {
         $payload = $this->prepare([], $options, [
             'active',
@@ -32,7 +32,7 @@ class Domains extends Endpoint
             function (stdClass $domain) {
                 return Models\Domain::fromResponse($domain);
             },
-            $response
+            $response,
         );
     }
 
@@ -59,7 +59,7 @@ class Domains extends Endpoint
      * @param Options|null $options
      * @return int
      */
-    public function count(Options $options = null): int
+    public function count(?Options $options = null): int
     {
         $payload = $this->prepare([], $options, [
             'active',

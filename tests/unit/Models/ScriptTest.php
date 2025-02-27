@@ -14,7 +14,7 @@ class ScriptTest extends TestCase
         $value = 'value';
         $uri = 'uri';
 
-        $object = (object)[
+        $object = (object) [
             'id' => $id,
             'name' => $name,
             'value' => $value,

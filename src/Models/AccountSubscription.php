@@ -75,7 +75,7 @@ class AccountSubscription implements Model
      * @param string|null $key
      * @return array|AccountLimit
      */
-    public function getLimits(string $key = null)
+    public function getLimits(?string $key = null)
     {
         if (! is_null($key) && array_key_exists($key, $this->limits)) {
             return $this->limits[$key];
@@ -94,7 +94,7 @@ class AccountSubscription implements Model
      * @param string|null $key
      * @return mixed
      */
-    public function getFeatures(string $key = null)
+    public function getFeatures(?string $key = null)
     {
         if (! is_null($key) && array_key_exists($key, $this->features)) {
             return $this->features[$key];

@@ -28,7 +28,7 @@ class Account extends Endpoint
      * @param Options|null $options
      * @return array<Models\Workspace>
      */
-    public function workspaces(Options $options = null): array
+    public function workspaces(?Options $options = null): array
     {
         $payload = $this->prepare([], $options, [
             'orderBy',
@@ -45,7 +45,7 @@ class Account extends Endpoint
             function (stdClass $workspace) {
                 return Models\Workspace::fromResponse($workspace);
             },
-            $response
+            $response,
         );
     }
 }

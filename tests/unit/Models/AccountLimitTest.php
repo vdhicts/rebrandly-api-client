@@ -13,7 +13,7 @@ class AccountLimitTest extends TestCase
         $used = 4;
         $included = 6;
 
-        $object = (object)[
+        $object = (object) [
             'blocked' => $blocked,
             'used' => $used,
             'included' => $included,

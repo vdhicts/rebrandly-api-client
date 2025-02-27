@@ -14,7 +14,7 @@ class Tags extends Endpoint
      * @param Options|null $options
      * @return array<Models\Tag>
      */
-    public function list(Options $options = null): array
+    public function list(?Options $options = null): array
     {
         $payload = $this->prepare([], $options, [
             'orderBy',
@@ -31,7 +31,7 @@ class Tags extends Endpoint
             function (stdClass $domain) {
                 return Models\Tag::fromResponse($domain);
             },
-            $response
+            $response,
         );
     }
 
@@ -58,7 +58,7 @@ class Tags extends Endpoint
      * @param Options|null $options
      * @return int
      */
-    public function count(Options $options = null): int
+    public function count(?Options $options = null): int
     {
         $payload = $this->prepare([], $options);
 

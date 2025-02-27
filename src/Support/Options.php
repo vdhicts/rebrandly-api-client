@@ -15,7 +15,7 @@ class Options
      * @param string|null $key
      * @return mixed
      */
-    public function get(string $key = null)
+    public function get(?string $key = null)
     {
         if (! is_null($key)) {
             if (! array_key_exists($key, $this->attributes)) {
@@ -34,9 +34,9 @@ class Options
     }
 
     /**
-     * @param mixed $value
+     * @param mixed|null $value
      */
-    public function set(string $key, $value = null): Options
+    public function set(string $key, mixed $value = null): Options
     {
         $this->attributes[$key] = $value;
 

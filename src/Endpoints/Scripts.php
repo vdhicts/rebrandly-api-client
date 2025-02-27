@@ -14,7 +14,7 @@ class Scripts extends Endpoint
      * @param Options|null $options
      * @return array
      */
-    public function list(Options $options = null): array
+    public function list(?Options $options = null): array
     {
         $payload = $this->prepare([], $options, [
             'orderBy',
@@ -31,7 +31,7 @@ class Scripts extends Endpoint
             function (stdClass $domain) {
                 return Models\Script::fromResponse($domain);
             },
-            $response
+            $response,
         );
     }
 
