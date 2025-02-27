@@ -31,7 +31,7 @@ class Scripts extends Endpoint
             function (stdClass $domain) {
                 return Models\Script::fromResponse($domain);
             },
-            $response
+            $response,
         );
     }
 

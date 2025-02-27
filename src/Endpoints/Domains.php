@@ -32,7 +32,7 @@ class Domains extends Endpoint
             function (stdClass $domain) {
                 return Models\Domain::fromResponse($domain);
             },
-            $response
+            $response,
         );
     }
 

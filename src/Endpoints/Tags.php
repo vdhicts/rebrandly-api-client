@@ -31,7 +31,7 @@ class Tags extends Endpoint
             function (stdClass $domain) {
                 return Models\Tag::fromResponse($domain);
             },
-            $response
+            $response,
         );
     }
 

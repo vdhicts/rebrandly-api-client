@@ -13,7 +13,7 @@ class TagTest extends TestCase
         $name = 'name';
         $color = 'color';
 
-        $object = (object)[
+        $object = (object) [
             'id' => $id,
             'name' => $name,
             'color' => $color,

@@ -35,7 +35,7 @@ class Links extends Endpoint
             function (stdClass $link) {
                 return Models\Link::fromResponse($link);
             },
-            $response
+            $response,
         );
     }
 
@@ -189,7 +189,7 @@ class Links extends Endpoint
             function (stdClass $tag) {
                 return Models\Tag::fromResponse($tag);
             },
-            $response
+            $response,
         );
     }
 
@@ -217,7 +217,7 @@ class Links extends Endpoint
             function (stdClass $script) {
                 return Models\Script::fromResponse($script);
             },
-            $response
+            $response,
         );
     }
 }

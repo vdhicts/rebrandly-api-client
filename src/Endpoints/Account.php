@@ -45,7 +45,7 @@ class Account extends Endpoint
             function (stdClass $workspace) {
                 return Models\Workspace::fromResponse($workspace);
             },
-            $response
+            $response,
         );
     }
 }
